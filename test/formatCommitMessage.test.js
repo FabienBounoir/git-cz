@@ -165,4 +165,14 @@ describe('formatCommitMessage()', () => {
 
     expect(message).equal('feat(custom-scope): First commit');
   });
+
+  it('throws a helpful error when commit type is invalid', () => {
+    expect(() => formatCommitMessage({
+      ...defaultState,
+      answers: {
+        ...defaultState.answers,
+        type: 'unknown'
+      }
+    })).to.throw(TypeError, 'Invalid commit type "unknown"');
+  });
 });

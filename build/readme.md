@@ -90,9 +90,9 @@ return scripts.config();
 
 The **header** is the only mandatory part of the commit message.
 
-The first line (type + subject) is limited to 50 characters **[enforced]**
+The subject is limited by `maxMessageLength` (64 by default) **[enforced]**
 
-Any other line should be limited to 72 character **[automatic wrapping]**
+Any other line is wrapped to 72 characters **[automatic wrapping]**
 
 This allows the message to be easier to read on GitHub as well as in various git tools.
 
